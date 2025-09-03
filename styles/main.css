@@ -1,0 +1,284 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FAFAFA;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    border-bottom: 2px solid #4A90E2;
+}
+
+.header h1 {
+    color: #4A90E2;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+/* Design Section */
+.design-section {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.design-display {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.design-display img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.design-display h2 {
+    color: #4A90E2;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+/* Inventory Table */
+.inventory-section h3 {
+    color: #4A90E2;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.inventory-table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.inventory-table th {
+    background: #4A90E2;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.inventory-table td {
+    padding: 10px;
+    border-bottom: 1px solid #E0E0E0;
+    text-align: center;
+    font-size: 1.05em;
+}
+
+.inventory-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Buttons */
+.btn-minus{
+    background: #E24A4A;
+    color: white;
+    border: none;
+    height: 32px;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2px;
+    flex: 1;
+    min-width: 40px;
+}
+
+
+.btn-plus {
+    background: #61e24a;
+    color: white;
+    border: none;
+    height: 32px;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2px;
+    flex: 1;
+    min-width: 40px;
+}
+
+.btn-minus:hover:not(:disabled),
+.btn-plus:hover {
+    background: #C03939;
+    transform: translateY(-1px);
+}
+
+
+
+.btn-minus:disabled {
+    background: #CCC;
+    color: #888;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.adjust-buttons {
+    display: flex;
+    gap: 4px;
+    width: 100%;
+}
+
+/* Conditional Formatting */
+.quantity-cell.high {
+    background-color: #D4EDDA;
+    color: #155724;
+    font-weight: 600;
+}
+
+.quantity-cell.medium {
+    background-color: #FFF3CD;
+    color: #856404;
+    font-weight: 600;
+}
+
+.quantity-cell.low {
+    background-color: #F8D7DA;
+    color: #721C24;
+    font-weight: 600;
+}
+
+/* Reset Section */
+.reset-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.reset-btn {
+    background: #4A90E2;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+    background: #357ABD;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #E0E0E0;
+    color: #666;
+    margin-top: auto;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.modal-content h3 {
+    color: #4A90E2;
+    margin-bottom: 20px;
+}
+
+#pinInput {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #E0E0E0;
+    border-radius: 6px;
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.2s ease;
+}
+
+#confirmReset {
+    background: #4A90E2;
+    color: white;
+}
+
+#confirmReset:hover {
+    background: #357ABD;
+}
+
+#cancelReset {
+    background: #E0E0E0;
+    color: #333;
+}
+
+#cancelReset:hover {
+    background: #CCC;
+}
+
+.error-message {
+    color: #D32F2F;
+    font-size: 0.9em;
+    margin-top: 10px;
+}

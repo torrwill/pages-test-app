@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Majunche</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1>Majunche Merch</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Design 1 -->
+      <section class="design-section" data-design="classic">
+        <div class="design-display">
+          <img src="./assets/jarritos.png" alt="jarritos">
+          <h2>Jarritos</h2>
+        </div>
+        <div class="inventory-section">
+          <h3>Inventory</h3>
+          <table class="inventory-table" id="classicTable">
+            <thead>
+              <tr>
+                <th>Size</th>
+                <th>Quantity</th>
+                <th>Adjust</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="reset-section">
+          <button class="reset-btn" data-design="classic">Reset Classic Tee</button>
+        </div>
+      </section>
+
+      <!-- Design 2 -->
+      <section class="design-section" data-design="premium">
+        <div class="design-display">
+          <img src="./assets/wildstyle.png" alt="wildstyle">
+          <h2>Wildstyle</h2>
+        </div>
+        <div class="inventory-section">
+          <h3>Inventory</h3>
+          <table class="inventory-table" id="premiumTable">
+            <thead>
+              <tr>
+                <th>Size</th>
+                <th>Quantity</th>
+                <th>Adjust</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="reset-section">
+          <button class="reset-btn" data-design="premium">Reset Premium Tee</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 Majunche</p>
+    </footer>
+  </div>
+
+  <!-- PIN Modal -->
+  <div class="modal" id="pinModal">
+    <div class="modal-content">
+      <h3>Enter PIN to Reset</h3>
+      <input type="password" id="pinInput" placeholder="Enter PIN" maxlength="4">
+      <div class="modal-buttons">
+        <button id="confirmReset">Confirm</button>
+        <button id="cancelReset">Cancel</button>
+      </div>
+      <p class="error-message" id="errorMessage"></p>
+    </div>
+  </div>
+
+  <script src="scripts/app.js"></script>
+</body>
+</html>
