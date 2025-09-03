@@ -17,7 +17,7 @@ const confirmReset = document.getElementById('confirmReset');
 const cancelReset = document.getElementById('cancelReset');
 const errorMessage = document.getElementById('errorMessage');
 
-let resetTarget = null; // which design we're resetting
+let resetTarget = null;
 
 // Initialize
 function init() {
